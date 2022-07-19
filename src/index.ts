@@ -29,7 +29,8 @@ const client = new SapphireClient({
 		'USER'
 	],
 	presence: {
-		activities: []
+		activities: [{ name: "unhygienic", type: "WATCHING"}],
+		status: 'dnd',
 	}
 });
 
