@@ -7,8 +7,15 @@ import type { MessageReaction, User } from 'discord.js';
 })
 export class UserEvent extends Listener {
   public async run(message: MessageReaction, user: User) {
-    if (message.message.channel.id !== "998188386525380609") return;
     if (user.id === "997868159119917148") return;
-    await message.message.delete()
+    if (message.partial) {
+      const msg = await message.fetch();
+      if (msg.message.channel.id !== "998943746206990376") return;
+      await message.message.delete()
+    } else {
+      if (message.message.channel.id !== "998943746206990376") return;
+      await message.message.delete()
+    }
+
   }
 }

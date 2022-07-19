@@ -19,7 +19,18 @@ const client = new SapphireClient({
 		'GUILD_MESSAGE_REACTIONS',
 		'DIRECT_MESSAGES',
 		'DIRECT_MESSAGE_REACTIONS'
-	]
+	],
+	partials: [
+		'CHANNEL',
+		'REACTION',
+		'MESSAGE',
+		'GUILD_SCHEDULED_EVENT',
+		'GUILD_MEMBER',
+		'USER'
+	],
+	presence: {
+		activities: []
+	}
 });
 
 const main = async () => {

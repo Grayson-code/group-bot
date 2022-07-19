@@ -8,8 +8,8 @@ import type { Message, TextChannel } from 'discord.js';
 })
 export class UserCommand extends SubCommandPluginCommand {
 	public async messageRun(message: Message, args: Args) {
-		const channels = await message.client.channels.fetch("998188386525380609") as TextChannel
-		const msg = await channels.send(await args.pick("string"))
-		msg.react("✔")
+		const channels = await message.client.channels.fetch("998943746206990376") as TextChannel
+		const msg = await channels.send(await args.rest("string"))
+		msg.react("✅")
 	}
 }
